@@ -18,7 +18,7 @@ export default function Preloader() {
         return prev + Math.floor(Math.random() * 10) + 2;
       });
     }, 250);
-    
+
     return () => clearInterval(interval);
   }, []);
 
@@ -46,16 +46,16 @@ export default function Preloader() {
               <h1 className="text-4xl md:text-7xl font-cinzel font-black tracking-[0.3em] text-[#cfa144] drop-shadow-[0_0_20px_rgba(207,161,68,0.5)] uppercase mb-2">
                 CHOWKATI ALOK RAJ
               </h1>
-              
+
               {/* Glitch overlay */}
-              <motion.h1 
+              <motion.h1
                 animate={{ x: [-2, 2, -1, 0], opacity: [0, 0.8, 0, 0] }}
                 transition={{ duration: 2, repeat: Infinity, repeatDelay: 1 }}
                 className="text-4xl md:text-7xl font-cinzel font-black tracking-[0.3em] text-[#ff0000] absolute top-0 left-0 uppercase mix-blend-screen"
               >
                 CHOWKATI ALOK RAJ
               </motion.h1>
-              <motion.h1 
+              <motion.h1
                 animate={{ x: [2, -2, 1, 0], opacity: [0, 0.8, 0, 0] }}
                 transition={{ duration: 2, repeat: Infinity, repeatDelay: 1 }}
                 className="text-4xl md:text-7xl font-cinzel font-black tracking-[0.3em] text-[#00aaff] absolute top-0 left-0 uppercase mix-blend-screen"
@@ -63,29 +63,29 @@ export default function Preloader() {
                 CHOWKATI ALOK RAJ
               </motion.h1>
             </motion.div>
-            
+
             <motion.h2
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
               className="text-sm md:text-xl font-orbitron tracking-[0.5em] text-white/50 uppercase mb-16"
             >
-              Dive into different fictions
+              Dive into different fictions | For better experience use desktop or laptop.
             </motion.h2>
 
             {/* Loading Bar Container */}
             <div className="w-64 md:w-96 h-[2px] bg-white/10 relative overflow-hidden">
-              <motion.div 
+              <motion.div
                 className="absolute top-0 left-0 h-full bg-[#cfa144] shadow-[0_0_15px_#cfa144]"
                 style={{ width: `${progress}%` }}
                 layout
               />
             </div>
-            
+
             {/* Percentage Text */}
             <div className="mt-4 font-share-tech text-[#cfa144] tracking-widest flex items-center gap-4">
-               <span>SYS.BOOT</span>
-               <span>[{progress >= 100 ? 100 : progress}%]</span>
+              <span>SYS.BOOT</span>
+              <span>[{progress >= 100 ? 100 : progress}%]</span>
             </div>
           </div>
         </motion.div>
