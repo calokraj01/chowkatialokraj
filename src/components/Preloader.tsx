@@ -64,14 +64,19 @@ export default function Preloader() {
               </motion.h1>
             </motion.div>
 
-            <motion.h2
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="text-sm md:text-xl font-orbitron tracking-[0.5em] text-white/50 uppercase mb-16"
+              className="flex flex-col items-center mb-16 text-center gap-4 px-4"
             >
-              Dive into different fictions | For better experience use desktop or laptop.
-            </motion.h2>
+              <h2 className="text-sm md:text-xl font-orbitron tracking-[0.4em] md:tracking-[0.5em] text-white/70 uppercase">
+                Dive into different fictions
+              </h2>
+              <p className="text-[10px] md:text-xs font-share-tech tracking-widest text-white/40 uppercase">
+                For the best experience, please use a desktop or laptop.
+              </p>
+            </motion.div>
 
             {/* Loading Bar Container */}
             <div className="w-64 md:w-96 h-[2px] bg-white/10 relative overflow-hidden">
